@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "es2020": true
+  },
+  "extends": "standard",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "indent": ["error", 2]
+  }
+}
