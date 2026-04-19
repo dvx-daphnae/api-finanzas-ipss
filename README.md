@@ -126,9 +126,9 @@ El proceso permitió entender cómo Hono maneja contextos, cómo TypeScript tipa
 - Todos los errores retornan JSON con campo `error` y el código HTTP apropiado.
 - Soporta validación básica: campos requeridos y tipos correctos.
 
-## 🔗 Video demostrativo
+## 🔗 Video demostrativo  
 
-[Insertar enlace de Loom/YouTube aquí - Se grabará después de probar todos los endpoints]
+https://www.loom.com/share/40fffc1396bb4e32a98dbbb648206e30  
 
 ## 📦 Estructura del proyecto
 
