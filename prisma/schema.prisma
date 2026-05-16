@@ -1,0 +1,28 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+// 1. Modelo de Categorías
+model Category {
+  id           Int           @id @default(autoincrement())
+  name         String        @unique
+  transactions Transaction[] // Una categoría tiene muchas transacciones
+}
+
+// 2. Modelo de Transacciones (Ingresos / Egresos)
+model Transaction {
+  id          Int      @id @default(autoincrement())
+  amount      Float    // El monto del movimiento
+  type        String   // Aquí guardaremos "income" o "expense"
+  description String?  // El signo "?" significa opcional (puede ser null)
+  date        DateTime @default(now()) // Fecha de la transacción
+  
+  // Relación: Una transacción pertenece a una categoría
+  categoryId  Int
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+}
