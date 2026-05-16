@@ -1,0 +1,15 @@
+meta {
+  name: Get Balance
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3000/transactions/balance
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
